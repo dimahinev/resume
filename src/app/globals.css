@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-pt-sans);
+  --font-mono: var(--font-pt-mono);
+
+  --stroke-color: var(--color-sky-200);
+}
+
+@layer base {
+  .dark {
+    --stroke-color: var(--color-sky-950);
+  }
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@utility list-square {
+  list-style-type: square;
+}
+
+@utility link-underline {
+  @apply fill-sky-700 text-sky-700 underline transition visited:text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300;
+}
+
+strong {
+  @apply text-gray-800 dark:text-gray-200;
+}
