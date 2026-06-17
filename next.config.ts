@@ -4,7 +4,7 @@ import createNextIntlPlugin from "next-intl/plugin";
 const withNextIntl = createNextIntlPlugin("./src/shared/lib/i18n/request.ts");
 
 const nextConfig: NextConfig = {
-  // output: "export",
+  output: "export",
 };
 
 export default withNextIntl(nextConfig);
